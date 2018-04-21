@@ -1,9 +1,22 @@
+"use strict";
+exports.__esModule = true;
+//import Project from "ts-simple-ast";
 /**
- * Created by Matt Pike on 20/04/2018.
+ * Generate a class that represents a data type
  */
 var Create = (function () {
     function Create() {
+        //codeGenerationProject.
     }
+    /**
+     * Create a new data type
+     * @param name
+     * @param implementsInterfaces
+     * @returns {boolean}
+     */
+    Create.prototype.call = function (name, implementsInterfaces) {
+        return "Created some file";
+    };
     return Create;
 }());
-//# sourceMappingURL=Create.js.map
+exports.Create = Create;

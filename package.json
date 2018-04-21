@@ -1,0 +1,23 @@
+{
+  "name": "fishpowered-framework-typescript-dev",
+  "version": "0.0.1",
+  "description": "Framework testbed",
+  "main": "Public/index.html",
+  "dependencies": {
+    "typedi": "^0.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^9.6.6",
+    "ts-simple-ast": "^10.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fishpowered/fishpowered-framework-typescript-dev.git"
+  },
+  "author": "Matt Pike",
+  "license": "CC-BY-2.5",
+  "bugs": {
+    "url": "https://github.com/fishpowered/fishpowered-framework-typescript-dev/issues"
+  },
+  "homepage": "https://github.com/fishpowered/fishpowered-framework-typescript-dev#readme"
+}

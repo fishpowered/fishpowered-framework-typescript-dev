@@ -1,16 +1,16 @@
+import {Service} from "./Service";
+
 /**
- * Defines a service that is callable internally
- *
- * @see WebService for services that can be called by external clients
+ * Defines a web service that is callable from a remote client
  */
-export interface Service{
+export interface WebService extends Service{
 
 	/**
-	 * Class dependencies should be passed in via the constructor
+	 * Service dependencies should be passed in via the constructor
 	 *
 	 * @param dependencies
 	 */
-	constructor(...dependencies) : Service;
+	constructor(...dependencies);
 
 	/**
 	 * Execute the service with the defined parameters.

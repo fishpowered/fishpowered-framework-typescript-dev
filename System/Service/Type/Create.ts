@@ -1,8 +1,21 @@
+import {Service} from "../Service";
+//import Project from "ts-simple-ast";
 /**
- * Created by Matt Pike on 20/04/2018.
+ * Generate a class that represents a data type
  */
-class Create implements Service{
+export class Create implements Service{
 
+	constructor(){ //
+		//codeGenerationProject.
+	}
 
-
+	/**
+	 * Create a new data type
+	 * @param name
+	 * @param implementsInterfaces
+	 * @returns {boolean}
+	 */
+	call(name:string, implementsInterfaces?: string[]): string{
+		return "Created some file";
+	}
 }
