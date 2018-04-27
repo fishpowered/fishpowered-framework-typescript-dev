@@ -1,17 +1,25 @@
-import {Container} from "typedi";
-import {Service} from "../../System/Service/Service";
+//import {CreateType} from "../../System/Service/Type/CreateType";
 /**
+ *
  * Created by Matt Pike on 20/04/2018.
  */
 export class CommandLineAdapter {
 
-	public dispatchRequestToService(commandLineArgs : string[]){
+	static dispatchRequestToService(commandLineArgs : string[]){
 		let request = CommandLineAdapter.convertCommandLineArgsToServiceRequest(commandLineArgs);
 		if(request.service){
+			const CreateType = require('../../System/Service/Type/CreateType.js');
+			let loadedService = new CreateType();
+			console.log(loadedService.call("testval"));
 			//Container.set(
+			/*
 			console.log("instanatiating "+request.service);
-			let service = Container.get<Service>(request.service);
-			console.log(service.call("foo"));
+			let serviceNamespace = "../../"+request.service;
+			const loadedService = await import(serviceNamespace);
+			console.log(loadedService.call("foo"));
+			/*import("../../"+request.service).then(service => {
+				console.log(service.call("foox"));
+			});*/
 		}
 	}
 

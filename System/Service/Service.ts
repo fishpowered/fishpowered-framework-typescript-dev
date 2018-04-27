@@ -10,7 +10,7 @@ export interface Service{
 	 *
 	 * @param dependencies
 	 */
-	constructor(...dependencies) : Service;
+	//constructor(...dependencies) : Service;
 
 	/**
 	 * Execute the service with the defined parameters.

@@ -1,19 +1,28 @@
 "use strict";
 exports.__esModule = true;
-var typedi_1 = require("typedi");
+//import {CreateType} from "../../System/Service/Type/CreateType";
 /**
+ *
  * Created by Matt Pike on 20/04/2018.
  */
-var CommandLineAdapter = (function () {
+var CommandLineAdapter = /** @class */ (function () {
     function CommandLineAdapter() {
     }
-    CommandLineAdapter.prototype.dispatchRequestToService = function (commandLineArgs) {
+    CommandLineAdapter.dispatchRequestToService = function (commandLineArgs) {
         var request = CommandLineAdapter.convertCommandLineArgsToServiceRequest(commandLineArgs);
         if (request.service) {
+            var CreateType = require('../../System/Service/Type/CreateType.js');
+            var loadedService = new CreateType();
+            console.log(loadedService.call("testval"));
             //Container.set(
-            console.log("instanatiating " + request.service);
-            var service = typedi_1.Container.get(request.service);
-            console.log(service.call("foo"));
+            /*
+            console.log("instanatiating "+request.service);
+            let serviceNamespace = "../../"+request.service;
+            const loadedService = await import(serviceNamespace);
+            console.log(loadedService.call("foo"));
+            /*import("../../"+request.service).then(service => {
+                console.log(service.call("foox"));
+            });*/
         }
     };
     CommandLineAdapter.convertCommandLineArgsToServiceRequest = function (commandLineArgs) {
